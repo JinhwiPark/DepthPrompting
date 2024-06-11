@@ -2,7 +2,6 @@
 
 ## The source code contains
  - Our implementation of depth prompting module 
- - Official implementation of NLSPN, Completionformer 
  - Depth prompting Network for depth completion
  - Train code for NYU, KITTI dataset
  - Evaluation code for NYU, KITTI, VOID, SUN RGBD, IPAD, nuScenes
@@ -163,7 +162,7 @@ nuScenes dataset
 ### [NYU Depth V2] Training & Testing
 ```shell
 # Train
-python main_DP.py --data_name NYU --dir_data {Dataset Directory} --gpus 0 --num_sample random --batch_size 1 --model_name depth_prompt_main --save OURS-NYU --patch_height 240 --patch_width 320 --prop_kernel 9 --prop_time 18 --init_scailing --loss L1L2_SILogloss_init
+python main_DP.py --data_name NYU --dir_data {Dataset Directory} --gpus 0 --num_sample random --batch_size 1 --model_name depth_prompt_main --save OURS-NYU --patch_height 240 --patch_width 320 --prop_kernel 9 --prop_time 18 --init_scailing --loss L1L2_SILogloss_init2 
 
 # Test
 python test_multiDataLoader.py --data_name NYU --dir_data {Dataset Directory} --gpus 0--model_name depth_prompt_main --pretrain {Pretrained weight} --prop_kernel 9 --conf_prop --prop_time 18 --patch_height 240 --patch_width 320 --nyu_val_samples 500,200,100,5,1 --init_scailing  

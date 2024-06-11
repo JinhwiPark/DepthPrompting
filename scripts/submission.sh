@@ -1,6 +1,6 @@
 # NYU - Ours
 # Train
-python main_DP.py --data_name NYU --dir_data '/workspace/data/DepthCompletion/nyudepthv2/' --num_sample random --batch_size 1 --model_name depth_prompt_main --save OURS-NYU --patch_height 240 --patch_width 320 --prop_kernel 9 --prop_time 18 --init_scailing  --loss L1L2_SILogloss_init2 --gpus 0 
+python main.py --data_name NYU --dir_data '/workspace/data/DepthCompletion/nyudepthv2/' --num_sample random --batch_size 1 --model_name depth_prompt_main --save OURS-NYU --patch_height 240 --patch_width 320 --prop_kernel 9 --prop_time 18 --init_scailing  --loss L1L2_SILogloss_init2 --gpus 0 
 # Test
 python test_multiDataLoader.py --data_name NYU --dir_data '/workspace/data/DepthCompletion/nyudepthv2/' --model_name depth_prompt_main --pretrain ./pretrained/OURS/weight_231025_192858.pth.tar --prop_kernel 9 --conf_prop --prop_time 18 --patch_height 240 --patch_width 320 --nyu_val_samples 500,200,100,5,1  --init_scailing --gpu 0
 
@@ -8,7 +8,7 @@ python test_multiDataLoader.py --data_name NYU --dir_data '/workspace/data/Depth
 
 # KITTI - Ours
 # Train
-python main_DP.py --data_name KITTIDC --dir_data '/workspace/data/DepthCompletion/kitti_DC/' --top_crop 100 --lidar_lines random_lidar --batch_size 1 --model_name depth_prompt_main --save OURS-KITTI --patch_height 240 --patch_width 1216 --prop_kernel 9 --prop_time 18 --conf_prop --init_scailing --loss L1L2_SILogloss_init --gpus 0 
+python main.py --data_name KITTIDC --dir_data '/workspace/data/DepthCompletion/kitti_DC/' --top_crop 100 --lidar_lines random_lidar --batch_size 1 --model_name depth_prompt_main --save OURS-KITTI --patch_height 240 --patch_width 1216 --prop_kernel 9 --prop_time 18 --conf_prop --init_scailing --loss L1L2_SILogloss_init --gpus 0 
 # Test
 python test_multiDataLoader.py --data_name KITTIDC --dir_data '/workspace/data/DepthCompletion/kitti_DC/' --model_name depth_prompt_main --pretrain ./pretrained/OURS/kitti_depth_prompt_main.tar  --top_crop 0 --kitti_val_lidars 64,32,16,8,4,2,1,0 --prop_kernel 9 --prop_time 18 --conf_prop --init_scailing --gpu 0
 
