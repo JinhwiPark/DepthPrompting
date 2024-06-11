@@ -27,6 +27,9 @@
 
 ## Data Preparation
 
+### Pretrained Weight and Data Split for NYU & KITTI
+Download the weight files and json files at 원드라이브
+
 ### NYU Depth V2 data Preparation
 Please download the preprocessed NYU Depth V2 dataset in HDF5 formats provided by Fangchang Ma.
 ```bash
