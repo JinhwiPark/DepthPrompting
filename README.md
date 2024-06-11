@@ -1,4 +1,6 @@
-# Depth Prompting for Sensor-Agnostic Depth Estimation
+# [CVPR2024] Depth Prompting for Sensor-Agnostic Depth Estimation
+
+### [<a href="https://arxiv.org/abs/2405.11867">Arxiv</a>] [<a href="https://github.com/JinhwiPark/DepthPrompting">Code</a>] [<a href="https://www.youtube.com/watch?v=TBXJPC6yeFY">Video</a>]
 
 ## The source code contains
  - Our implementation of depth prompting module 
