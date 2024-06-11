@@ -3,8 +3,8 @@
 ### [<a href="https://arxiv.org/abs/2405.11867">Arxiv</a>] [<a href="https://github.com/JinhwiPark/DepthPrompting">Code</a>] [<a href="https://www.youtube.com/watch?v=TBXJPC6yeFY">Video</a>] [[Poster](https://drive.google.com/file/d/1gO4XqBlqTe2Lx3ZMrpeFwDsPfrTkSOSh/view?usp=drive_link)]
 
 ## The source code contains
- - Our implementation of depth prompting module 
- - Depth prompting Network for depth completion
+ - Our implementation of the depth prompting module 
+ - Depth prompting network for depth completion
  - Train code for NYU, KITTI dataset
  - Evaluation code for NYU, KITTI, VOID, SUN RGBD, IPAD, nuScenes
 
