@@ -1,6 +1,6 @@
 # [CVPR2024] Depth Prompting for Sensor-Agnostic Depth Estimation
 
-### [<a href="https://arxiv.org/abs/2405.11867">Arxiv</a>] [<a href="https://github.com/JinhwiPark/DepthPrompting">Code</a>] [<a href="https://www.youtube.com/watch?v=TBXJPC6yeFY">Video</a>]
+### [<a href="https://arxiv.org/abs/2405.11867">Arxiv</a>] [<a href="https://github.com/JinhwiPark/DepthPrompting">Code</a>] [<a href="https://www.youtube.com/watch?v=TBXJPC6yeFY">Video</a>] [[Poster](https://drive.google.com/file/d/1gO4XqBlqTe2Lx3ZMrpeFwDsPfrTkSOSh/view?usp=drive_link)]
 
 ## The source code contains
  - Our implementation of depth prompting module 
@@ -30,7 +30,7 @@
 ## Data Preparation
 
 ### Pretrained Weight and Data Split for NYU & KITTI
-Download the weight files and json files at 원드라이브
+Download the weight files and json files at [URL](https://drive.google.com/drive/folders/1fzh0btV3Gd1qeY6Yr9qzACRo5HcSer4I?usp=sharing)
 
 ### NYU Depth V2 data Preparation
 Please download the preprocessed NYU Depth V2 dataset in HDF5 formats provided by Fangchang Ma.
