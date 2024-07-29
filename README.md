@@ -165,21 +165,25 @@ nuScenes dataset
 ```
 
 ### [NYU Depth V2] Training & Testing
+Please download the pretrained weights for any monocular depth model. We offer the pretrained weight files from [DepthFormer](https://github.com/zhyever/Monocular-Depth-Estimation-Toolbox).
+
+[Download Link](https://drive.google.com/drive/folders/1kBb-70yvXjIQqGU28RNaHC2aZT1aTy7H)
+
 ```shell
 # Train
-python main_DP.py --data_name NYU --dir_data {Dataset Directory} --gpus 0 --num_sample random --batch_size 1 --model_name depth_prompt_main --save OURS-NYU --patch_height 240 --patch_width 320 --prop_kernel 9 --prop_time 18 --init_scailing --loss L1L2_SILogloss_init2 
+python main_DP.py --data_name NYU --dir_data {Dataset Directory} --pretrain ./pretrained/OURS/depthformer_nyu.pth --num_sample random --batch_size 32 --model_name depth_prompt_main --save OURS-NYU --patch_height 240 --patch_width 320 --prop_kernel 9 --prop_time 18 --init_scailing  --loss L1L2_SILogloss_init2 --gpus 0,1,2,3
 
 # Test
-python test_multiDataLoader.py --data_name NYU --dir_data {Dataset Directory} --gpus 0--model_name depth_prompt_main --pretrain {Pretrained weight} --prop_kernel 9 --conf_prop --prop_time 18 --patch_height 240 --patch_width 320 --nyu_val_samples 500,200,100,5,1 --init_scailing  
+python test_multiDataLoader.py --data_name NYU --dir_data {Dataset Directory} --model_name depth_prompt_main --pretrain ./pretrained/OURS/Depthprompting_depthformer_nyu.tar --prop_kernel 9 --conf_prop --prop_time 18 --patch_height 240 --patch_width 320 --nyu_val_samples 500,200,100,5,1  --init_scailing --gpu 0
 ```
 
 ### [KITTI Depth Completion] Training & Testing
 ```shell
 # Train
-python main_DP.py --data_name KITTIDC --dir_data {Dataset Directory} --gpus 0 --top_crop 100 --lidar_lines random_lidar --batch_size 1 --model_name depth_prompt_main --save OURS-KITTI --patch_height 240 --patch_width 1216 --prop_kernel 9 --prop_time 18 --conf_prop --init_scailing --loss L1L2_SILogloss_init 
+python main_DP.py --data_name KITTIDC --dir_data {Dataset Directory} --pretrain ./pretrained/OURS/depthformer_kitti.pth --top_crop 100 --lidar_lines random_lidar --batch_size 1 --model_name depth_prompt_main --save OURS-KITTI --patch_height 240 --patch_width 1216 --prop_kernel 9 --prop_time 18 --conf_prop --init_scailing --loss L1L2_SILogloss_init --gpus 0
 
 # Test
-python test_multiDataLoader.py --data_name KITTIDC --dir_data {Dataset Directory} --gpu 0 --model_name depth_prompt_main --pretrain {Pretrained weight} --top_crop 0 --kitti_val_lidars 64,32,16,8,4,2,1,0 --prop_kernel 9 --prop_time 18 --conf_prop --init_scailing
+python test_multiDataLoader.py --data_name KITTIDC --dir_data {Dataset Directory} --model_name depth_prompt_main --pretrain ./pretrained/OURS/Depthprompting_depthformer_kitti.tar  --top_crop 0 --kitti_val_lidars 64,32,16,8,4,2,1,0 --prop_kernel 9 --prop_time 18 --conf_prop --init_scailing --gpu 1
 ```
 
 ### [VOID] Testing
@@ -212,5 +216,6 @@ This code is based on the original implementations:
 [NLSPN](https://github.com/zzangjinsun/NLSPN_ECCV20)([paper](https://arxiv.org/abs/2007.10042)),
 [GraphCSPN](https://github.com/xinliu20/GraphCSPN_ECCV2022)([paper](https://arxiv.org/abs/2210.10758)),
 [HNDR](https://github.com/princeton-computational-imaging/HNDR/tree/main/!DepthBundleApp)([paper](https://light.princeton.edu/wp-content/uploads/2022/04/hndr.pdf))
+[DepthFormer](https://github.com/zhyever/Monocular-Depth-Estimation-Toolbox)([paper](https://arxiv.org/pdf/2203.14211))
 
 
