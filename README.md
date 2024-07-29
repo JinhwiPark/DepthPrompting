@@ -165,9 +165,9 @@ nuScenes dataset
 ```
 
 ### [NYU Depth V2] Training & Testing
-Please download the pretrained weights for any monocular depth model. We offer the pretrained weight files from [DepthFormer](https://github.com/zhyever/Monocular-Depth-Estimation-Toolbox).
+Please download the pretrained weights for any monocular depth model. 
 
-[Download Link](https://drive.google.com/drive/folders/1kBb-70yvXjIQqGU28RNaHC2aZT1aTy7H)
+We offer the pretrained weight files for [DepthFormer](https://drive.google.com/drive/folders/1kBb-70yvXjIQqGU28RNaHC2aZT1aTy7H). 
 
 ```shell
 # Train
